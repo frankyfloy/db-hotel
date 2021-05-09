@@ -1,1 +1,1 @@
-SELECT `stanza_id`, COUNT(`stanza_id`) FROM `prenotazioni` GROUP BY `stanza_id`
+SELECT `stanza_id`, COUNT(`id`) FROM `prenotazioni` GROUP BY `stanza_id`
