@@ -1,0 +1,1 @@
+SELECT HOUR(`created_at`), COUNT(`stanza_id`)  FROM `prenotazioni` GROUP BY HOUR(`created_at`) ORDER BY COUNT(`stanza_id`) DESC;

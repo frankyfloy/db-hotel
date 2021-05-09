@@ -1,0 +1,1 @@
+SELECT * FROM `ospiti` where `date_of_birth` <= now() - INTERVAL 20 YEAR;
