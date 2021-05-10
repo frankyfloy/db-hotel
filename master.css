@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size:100%;
+    outline: none;
+}
+
+/* Property general */
+label{
+    margin: 0;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Ubuntu', sans-serif;
+    text-rendering: optimizeLegibility;
+    background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
+    background-color: #dfdfdf;
+    background-repeat: no-repeat;
+    min-width: 750px;
+    overflow:  hidden;
+    min-width: 820px;
+    display: flex;
+}
+
+/* Contenitore Root */
+#root{
+    height: 84vh;
+    width: 70vw;
+    min-width: 820px;
+    margin: auto;
+    padding: 20px 40px;
+    box-shadow: 0px 1px 7px #888888;
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+nav{
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
+    padding
+    display: flex;
+    border-radius: 10px;
+}
+
+nav .input-group{
+    width: max-content;
+    margin: auto;
+}
+
+nav > button{
+    text-shadow: 1px 1px 1px #000000;
+    border-color: rgba(0,0,0,0.84);
+    box-shadow: 5px 5px 6px #888888;
+    color: #F3EEEA;
+}
+
+/* button:active{
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+    transform: scale(1.02);
+    transition: 0.3s;
+} */
+
+.p-lr{
+    padding: 0 10px;
+}
+
+.btn-grey{
+    background-color: #e9ecef;
+}
+
+/* ---------------Scroll Vertical (Classe Scroll)------------------------- */
+.scroll{
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.scroll::-webkit-scrollbar{
+	-webkit-overflow-scrolling: auto;
+	width: 6px;
+}
+.scroll::-webkit-scrollbar-thumb{
+	border-radius: 6px;
+    background-color: #000000;
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+/* ------------------------------------------------------------- */
