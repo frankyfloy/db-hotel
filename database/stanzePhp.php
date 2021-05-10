@@ -1,3 +1,4 @@
+<!-- PHP -->
 <?php
     include_once __DIR__.'.\dbCall.php';
     ?>
@@ -24,10 +25,24 @@
                 <?php
                 }
             } elseif ($result) {
-                echo "0 results";
+                ?>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"><?php echo 'NOT RESULTS'] ?></td>
+                            <
+                        </tr>
+                    </tbody>
+            <?php
 
             } else {
-                echo "query error";
+                ?>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"><?php echo 'ERROR'] ?></td>
+                            <
+                        </tr>
+                    </tbody>
+            <?php
             }
             ?>
             </table>

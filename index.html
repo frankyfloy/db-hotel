@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>vue-dishi</title>
+        <title>db-hotel</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,7 +15,6 @@
 
         <!-- mycss and media-query -->
         <link rel="stylesheet" href="assets\master.css">
-        <link rel="stylesheet" href="assets\media-query.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
 
@@ -31,9 +30,19 @@
     <body>
         <div id="root">
 
-
             <ol id="cardList" class="scroll">
-
+                <li v-for="stanza,i in stanze">
+                    <div class="">
+                        id {{stanza.id}}
+                    </div>
+                    <div class="">
+                        letti {{stanza.beds}}
+                    </div>
+                    <div class="">
+                        piano {{stanza.floor}}
+                    </div>
+                    <hr>
+                </li>
             </ol>
         </div>
 
