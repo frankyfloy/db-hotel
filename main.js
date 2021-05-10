@@ -14,7 +14,7 @@ var app = new Vue({
     methods: {
 
         initStanze(){
-            axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+            axios.get('https://localhost')
             .then((response)  => {
                 console.log(response);
             })
