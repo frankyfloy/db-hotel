@@ -1,11 +1,11 @@
 <?php
     include_once __DIR__.'.\dbCall.php';
     ?>
-        <table>
+        <table style="text-align: center;">
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <th>id</th>
+                    <th>numero stanza</th>
                 </tr>
             </thead>
             <?php
