@@ -1,98 +1,161 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-size:100%;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  outline: none;
 }
 
-/* Property general */
-label{
-    margin: 0;
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  text-rendering: optimizeLegibility;
+  background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
+  background-color: #dfdfdf;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  /* Contenitore Root */
 }
-
-
-body{
-    height: 100vh;
-    width: 100vw;
-    font-family: 'Ubuntu', sans-serif;
-    text-rendering: optimizeLegibility;
-    background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
-    background-color: #dfdfdf;
-    background-repeat: no-repeat;
-    min-width: 750px;
-    overflow:  hidden;
-    min-width: 820px;
-    display: flex;
+body #root {
+  position: relative;
+  height: 84vh;
+  width: 70vw;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  margin: auto;
+  padding: 20px 40px;
+  box-shadow: 0px 1px 7px #888888;
+  background-color: darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
-
-/* Contenitore Root */
-#root{
-    height: 84vh;
-    width: 70vw;
-    min-width: 820px;
-    margin: auto;
-    padding: 20px 40px;
-    box-shadow: 0px 1px 7px #888888;
-    background-color: darkgrey;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
+body #root ol {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-nav{
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
-    padding
-    display: flex;
-    border-radius: 10px;
+body #root ol li.card {
+  border: none;
+  background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column wrap;
+  align-items: stretch;
+  padding: 20px;
+  flex: 0 0 min-content;
+  justify-content: center;
+  color: #e9ecef;
+  max-width: 330px;
+  border-radius: 20px;
+  margin: 10px 30px;
+  cursor: pointer;
 }
-
-nav .input-group{
-    width: max-content;
-    margin: auto;
+body #root ol li.card .card-img-top {
+  padding: 0.3rem;
+  width: 270px;
+  min-height: 200px;
 }
-
-nav > button{
-    text-shadow: 1px 1px 1px #000000;
-    border-color: rgba(0,0,0,0.84);
-    box-shadow: 5px 5px 6px #888888;
-    color: #F3EEEA;
+body #root ol li.card .card-body {
+  flex: 1 1 auto;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  margin-top: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #888888;
 }
-
-/* button:active{
-    outline: none;
+body #root ol li.card .card-body p, body #root ol li.card .card-body .card-title {
+  color: gold;
 }
-
-button:focus{
-    outline: none;
-    transform: scale(1.02);
-    transition: 0.3s;
-} */
-
-.p-lr{
-    padding: 0 10px;
+body #root ol li.card .card-body strong {
+  color: white;
+  padding-right: 10px;
 }
-
-.btn-grey{
-    background-color: #e9ecef;
+body #root .cont-roomDetails {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+body #root .cont-roomDetails .roomDetails {
+  margin: auto;
+  border: none;
+  background-image: linear-gradient(0deg, #000000 0%, #414141 150%);
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column wrap;
+  align-items: stretch;
+  padding: 20px;
+  flex: 0 0 min-content;
+  justify-content: center;
+  color: #e9ecef;
+  border-radius: 20px;
+  margin: 10px 30px;
+  cursor: pointer;
+  background-color: black;
+  position: absolute;
+}
+body #root .cont-roomDetails .roomDetails .card-body {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  margin-top: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #888888;
+}
+body #root .cont-roomDetails .roomDetails .card-body p, body #root .cont-roomDetails .roomDetails .card-body .card-title {
+  color: gold;
+}
+body #root .cont-roomDetails .roomDetails .card-body strong {
+  color: white;
+  padding-right: 10px;
+}
+body #root .cont-roomDetails .roomDetails .card-body .btn {
+  height: 40px;
+  margin: auto;
+}
+body #root .cont-roomDetails .roomDetails .card-body .btn strong {
+  color: inherit;
+  padding: 0;
 }
 
 /* ---------------Scroll Vertical (Classe Scroll)------------------------- */
-.scroll{
-	overflow-y: auto;
-	overflow-x: hidden;
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-.scroll::-webkit-scrollbar{
-	-webkit-overflow-scrolling: auto;
-	width: 6px;
+
+.scroll::-webkit-scrollbar {
+  -webkit-overflow-scrolling: auto;
+  width: 6px;
 }
-.scroll::-webkit-scrollbar-thumb{
-	border-radius: 6px;
-    background-color: #000000;
-    box-shadow: 0 0 1px rgba(255,255,255,.5);
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #000000;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 /* ------------------------------------------------------------- */

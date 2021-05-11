@@ -28,22 +28,44 @@
     </head>
 
     <body>
-        <div id="root">
+        <div id="root" @click="setNullEvent">
 
-            <ol id="cardList" class="scroll">
-                <li v-for="stanza,i in stanze">
-                    <div class="">
-                        id {{stanza.id}}
+            <ol id="listRoom" class="scroll">
+                <li
+                    v-for="(stanza,i) in stanze"
+                    @click="getDetails(i + 1)"
+                    :key="'id' + i"
+                    class="card">
+
+                    <img class="card-img-top" src="assets\img\stanzaImg.jpg" alt="">
+
+                    <div class="card-body">
+                        <h6 class="card-title"><strong>Stanza: </strong> {{ stanza.room_number }}</h6>
+                        <p><strong>Letti : </strong> {{stanza.beds}}</p>
+                        <p><strong>Piano : </strong> {{stanza.floor}}</p>
                     </div>
-                    <div class="">
-                        letti {{stanza.beds}}
-                    </div>
-                    <div class="">
-                        piano {{stanza.floor}}
-                    </div>
-                    <hr>
+
                 </li>
             </ol>
+
+            <div
+                v-if="stanzaSel !== null"
+                @click="setNullEvent"
+                class="cont-roomDetails">
+                <div class="roomDetails card">
+                    <img class="card-img-top" src="assets\img\stanzaImg.jpg">
+                    <div class="card-body">
+                        <div class="">
+                            <h6 class="card-title"><strong>Numero Stanza : </strong> {{ stanzaSel.room_number }}</h6>
+                            <p><strong>Letti : </strong> {{ stanzaSel.beds }}</p>
+                            <p><strong>Piano : </strong> {{ stanzaSel.floor }}</p>
+                        </div>
+                        <div class="d-flex">
+                            <button type="button" name="button" class="btn bg-success"><strong>Prenota</strong></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Vue ajax/libs-->
